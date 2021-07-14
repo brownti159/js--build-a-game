@@ -9,13 +9,13 @@ const GAME_HEIGHT= 600;
 
 
 let game = new Game(GAME_WIDTH, GAME_HEIGHT);
-game.start();
+
 
 
 let lastTime = 0;
 
 //images
-let imgball = document.getElementById('img_ball')
+// let imgball = document.getElementById('img_ball')
 
 function gameLoop(timestamp) {
     let deltaTime = timestamp - lastTime;

@@ -1,4 +1,4 @@
-import {detectionCollision} from './collisionDectection.js';
+import {detectCollision} from './collisionDectection.js';
 export default class Brick {
     constructor(game, position) {
         this.image = document.getElementById('img_brick');
@@ -10,16 +10,16 @@ export default class Brick {
         this.width = 80
         this.height = 24;
 
-        this.markForDeletion = false;
+        this.markedForDeletion = false;
 
 
     }
 
     update(deltaTime) {
-        if(detectionCollision(this.game.ball, this)) {
-            this.game.ball.speed.y = -this.game.ball.speed.y
+        if(detectCollision(this.game.ball, this)) {
+            this.game.ball.speed.y = -this.game.ball.speed.y;
 
-            this.markForDeletion = true;
+            this.markedForDeletion = true;
         }
 
     }
