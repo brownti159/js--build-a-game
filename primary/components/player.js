@@ -1,16 +1,20 @@
-class Player{
+export default class Player{
     constructor(game) {
-        this.gameWidth = game.gameWidth;
+        this.img = document.getElementById('player')
+        
 
-        this.width = 50;
-        this.height = 50;
+        this.gameWidth =700;
+        this.gameHeight =350;
+
+        this.width = 20;
+        this.height = 20;
         
         this.maxSpeed = 7;
         this.speed = 0;
 
         this.position = {
-            x: game.gameWidth - this.width -10,
-            y: game.gameHeight/  2 - this.height / 2,
+            x: this.gameWidth - this.width -10,
+            y: this.gameHeight/  2 - this.height / 2,
         };
     }
     moveUP() {
@@ -24,11 +28,15 @@ class Player{
         this.speed = 0;
     }
 
-    draw(ctx) {
-        // ctx.fillStyle = Image(url('./img/player.png'))
-        
+    draw(ctx){
+        console.log("player.draw")
+        ctx.drawImage(this.img, this.position.x, this.position.y, this.width, this.height)
 
     }
+
+        
+
+    
     update(deltaTime) {
         
         this.position.x += this.speed;
@@ -36,6 +44,7 @@ class Player{
         if(this.position.x < 0) this.position.x = 0;
         if(this.position.x + this.width > this.gameWidth)
             this.position.x = this.gameWidth - this.width;
-    }
+        }
 }
+
 

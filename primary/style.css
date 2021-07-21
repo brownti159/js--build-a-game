@@ -1,9 +1,12 @@
-#gamescreen {
+#gameScreen {
   border: solid 2px black;
   background: url("./img/bg-700x400.png");
-  display: flex;
-  justify-self: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.player {
-}
+/* #player {
+  display: none;
+} */
