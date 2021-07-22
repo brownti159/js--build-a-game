@@ -21,24 +21,35 @@
 // Keyboarder.KEYS = { LEFT: 37, RIGHT: 39, UP: 38, DOWN: 40, S: 83 }
 export default class Keyboarder {
 
-  constructor(paddle, game) {
+  constructor(player) {
       //moves paddle when key is pressed
-      document.addEventListener("keydown", event => {
+      document.addEventListener("keydown", (event) => {
 
-        switch(event.keycode){
+        switch(event.keyCode){
         case 87:
-        sub.moveup()
+        player.moveUp()
         break;
 
         case 83:
-        sub.movedown()
+        player.moveDown()
         break;
 
         case 68:
-        sub.shoot()
+        player.shoot()
         break;
         } 
 
+      });
+      document.addEventListener("keyup", event => {
+        switch (event.keyCode) {
+          case 87:
+            if (player.speed < 0) player.stop();
+            break;
+  
+          case 83:
+            if (player.speed > 0) player.stop();
+            break;
+        }
       });
     };
 }
