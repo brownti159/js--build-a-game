@@ -1,20 +1,22 @@
 export default class Player{
-    constructor(gameWidth, gameHeight) {
+    constructor(game) {
         this.img = document.getElementById('player')
+        this.beam = document.getElementById('shoot')
         
-
+        
         this.gameWidth =700;
         this.gameHeight =400;
 
         this.width = 20;
         this.height = 20;
         
-        this.maxSpeed = 2;
+        this.maxSpeed = 5;
         this.speed = 0;
 
         this.position = {
             x: this.gameWidth - this.width - 650,
             y: this.gameHeight/  2 - this.height / 2,
+            
         };
     }
     moveUp() {

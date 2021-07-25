@@ -7,6 +7,10 @@
   transform: translate(-50%, -50%);
 }
 
-/* #player {
+#player {
   display: none;
-} */
+}
+
+#asteroid {
+  display: none;
+}
