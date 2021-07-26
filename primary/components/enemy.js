@@ -1,7 +1,7 @@
 export default class Enemy {
     constructor(GAME_WIDTH, GAME_HEIGHT) {
         this.img = document.getElementById('enemy')
-
+        // this.enemies = []
         this.gamewidth = GAME_WIDTH;
         this.gameHeight = GAME_HEIGHT;
 
@@ -10,13 +10,16 @@ export default class Enemy {
 
         this.position = {
             x: this.gamewidth - this.width,
-            y: this.gameHeight / 2,
+            y: Math.floor(Math.random() * this.gameHeight - this.height),
         };
+        console.log(this.position)
         this.speed = 3
     };
 
     draw(ctx){
-        ctx.drawImage(this.img, this.position.x, this.position.y, this.width, this.height)
+        ctx.drawImage(this.enimies, this.position.x, this.position.y, this.width, this.height)
+        // this.enemies = add.group();
+	    // this.enemies.createMultiple(25, 'enemy');
     }
 
     update(deltaTime){

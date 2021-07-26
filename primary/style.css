@@ -14,3 +14,11 @@
 #asteroid {
   display: none;
 }
+
+#shoot {
+  display: none;
+}
+
+#enemy {
+  display: none;
+}
