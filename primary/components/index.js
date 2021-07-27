@@ -30,6 +30,19 @@ new Keyboarder(player);
 // animate()
 
 
+    let Enemies = [];
+
+    //generate enemies
+    function generate() {
+        for (let i = 0; i < 10; i++) {
+            let e = new Enemy(GAME_WIDTH, GAME_HEIGHT);
+            e.draw(ctx)
+            // e.update(deltaTime)
+            e.push;
+            Enemies.push(e);
+        };
+    };
+    generate()
 
 
 let lastTime = 0;
@@ -44,9 +57,12 @@ function gameLoop(timestamp) {
     
     player.update(deltaTime);
     player.draw(ctx);
+    console.log(Enemies)
+    for (let enemy of Enemies) {
     enemy.draw(ctx);
     enemy.update(deltaTime)
-
+    }
+    
     requestAnimationFrame(gameLoop)
 }
 

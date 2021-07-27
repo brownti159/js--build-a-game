@@ -1,4 +1,5 @@
 import Player from "./player.js"
+
 export default class Shoot {
     constructor(GAMEWIDTH, GAMEHEIGHT, Player) {
         this.shoot = document.getElementById('shoot')

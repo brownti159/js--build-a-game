@@ -1,28 +1,24 @@
+// import Enemy from "./enemy.js"
 // import Keyboarder from "./keyboarder.js"
-// // import Asteroid from "./asteroid.js"
 // import Player from "./player.js"
 
-
 // export default class Game {
-//     constructor(gameWidth, gameHeight) {
-//         this.gameWidth = gameWidth,
-//         this.gameHeight = gameHeight,
-//         this.player = new Player(this)
-//         // this.asteroid = new Asteroid(this)
-//         this.gameObject = [this.player]
-//         new Keyboarder(this.player);
+//     constructor(GAME_WIDTH, GAME_HEIGHT) {
+//         this.gameWidth = GAME_WIDTH
+//         this.gameHeight = GAME_HEIGHT
+//         this.player = new Player(game)
+//         this.enemy = new Enemy(game)
+
+//         new Keyboarder(this.player, this);
 
 
-
-
-//     };
-
+//     }
 //     draw(ctx){
-        
+//         player.draw(ctx)
+//     }
 
-//     };
 //     update(deltaTime){
 
-//     };
+//     }
 
 // }

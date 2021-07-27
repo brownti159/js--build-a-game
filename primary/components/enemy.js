@@ -9,20 +9,20 @@ export default class Enemy {
         this.height = 20;
 
         this.position = {
-            x: this.gamewidth - this.width,
+            x: this.gamewidth,
             y: Math.floor(Math.random() * this.gameHeight - this.height),
         };
-        console.log(this.position)
         this.speed = 3
+
     };
+    
+    
 
     draw(ctx){
-        ctx.drawImage(this.enimies, this.position.x, this.position.y, this.width, this.height)
-        // this.enemies = add.group();
-	    // this.enemies.createMultiple(25, 'enemy');
-    }
+        ctx.drawImage(this.img, this.position.x, this.position.y, this.width, this.height)
+    };
 
     update(deltaTime){
         this.position.x += -this.speed
-    }
-}
+    };
+};

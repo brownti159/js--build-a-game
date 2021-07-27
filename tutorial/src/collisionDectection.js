@@ -1,4 +1,4 @@
-export function detectCollision(ball, gameObject) {
+export function detectCollision(player, enemy) {
     // check colloison with gameObject
     let bottomOfBall = ball.position.y + ball.size;
     let topOfBall = ball.position.y
