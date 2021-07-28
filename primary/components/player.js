@@ -1,11 +1,14 @@
+import Game from "./game.js"
+
+
 export default class Player{
     constructor(game) {
         this.img = document.getElementById('player')
         this.beam = document.getElementById('shoot')
         
         
-        this.gameWidth =700;
-        this.gameHeight =400;
+        this.gameWidth = game.gameWidth;
+        this.gameHeight = game.gameHeight;
 
         this.width = 20;
         this.height = 20;
@@ -14,8 +17,8 @@ export default class Player{
         this.speed = 0;
 
         this.position = {
-            x: this.gameWidth - this.width - 650,
-            y: this.gameHeight/  2 - this.height / 2,
+            x: game.gameWidth - this.width - 650,
+            y: game.gameHeight/  2 - this.height / 2,
             
         };
     }
@@ -34,7 +37,7 @@ export default class Player{
     }
 
     draw(ctx){
-        
+
         ctx.drawImage(this.img, this.position.x, this.position.y, this.width, this.height)
 
     }

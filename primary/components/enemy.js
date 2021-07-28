@@ -1,16 +1,18 @@
+import Game from "./game.js"
+
 export default class Enemy {
-    constructor(GAME_WIDTH, GAME_HEIGHT) {
+    constructor(game) {
         this.img = document.getElementById('enemy')
-        // this.enemies = []
-        this.gamewidth = GAME_WIDTH;
-        this.gameHeight = GAME_HEIGHT;
+
+        this.gameWidth = game.gameWidth;
+        this.gameHeight = game.gameHeight;
 
         this.width = 20;
         this.height = 20;
 
         this.position = {
-            x: this.gamewidth,
-            y: Math.floor(Math.random() * this.gameHeight - this.height),
+            x: game.gamewidth,
+            y: Math.floor(Math.random() * game.gameHeight),
         };
         this.speed = 3
 
