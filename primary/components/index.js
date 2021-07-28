@@ -32,9 +32,10 @@ new Keyboarder(player);
 
     let Enemies = [];
 
+    let generatetimer = setInterval(generate, 3000);
     //generate enemies
     function generate() {
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 7; i++) {
             let e = new Enemy(GAME_WIDTH, GAME_HEIGHT);
             e.draw(ctx)
             // e.update(deltaTime)
@@ -43,6 +44,9 @@ new Keyboarder(player);
         };
     };
     generate()
+
+    
+    
 
 
 let lastTime = 0;
@@ -57,7 +61,7 @@ function gameLoop(timestamp) {
     
     player.update(deltaTime);
     player.draw(ctx);
-    console.log(Enemies)
+    
     for (let enemy of Enemies) {
     enemy.draw(ctx);
     enemy.update(deltaTime)
